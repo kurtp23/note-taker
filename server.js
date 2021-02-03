@@ -5,7 +5,8 @@ const path = require(`path`);
 const { nanoid } = require("nanoid");
 // create express app
 const app = express();
-const PORT = 4000;
+process.env.PORT;
+const PORT = process.env.PORT || 4000;
 // include midleware to parse json
 app.use(express.static("public"));
 app.use(express.urlencoded({ extended: true }));
